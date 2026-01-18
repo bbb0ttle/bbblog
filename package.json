@@ -15,6 +15,9 @@
     "start": "tsc -w",
     "prepare": "tsc -d && terser dist/index.js --compress --mangle -o dist/index.js"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "terser": "^5.19.2",
     "typescript": "^5.2.2"
