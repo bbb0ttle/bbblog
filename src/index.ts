@@ -34,11 +34,11 @@ class BBBlog extends HTMLElement {
 
   connectedCallback() {
     this.render();
-    // this.fetchPosts();
+    this.fetchPosts();
   }
 
   attributeChangedCallback(name: string, oldValue: string | null, newValue: string | null) {
-    if (name === 'content' && oldValue !== newValue && this.isConnected) {
+    if (name === 'content' && oldValue !== null && oldValue !== newValue && this.isConnected) {
       this.fetchPosts();
     }
   }
