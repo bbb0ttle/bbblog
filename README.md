@@ -2,6 +2,8 @@
 
 A minimal web component for rendering blog posts.
 
+**Demo:** [b.bbki.ng](https://b.bbki.ng)
+
 ## Installation
 
 ```bash
