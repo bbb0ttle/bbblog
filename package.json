@@ -3,13 +3,16 @@
   "version": "0.0.1",
   "description": "bbblog",
   "main": "dist/index.js",
-    "type": "module",
+  "type": "module",
   "types": "dist/index.d.ts",
   "author": "bbbottle <b@bbki.ng>",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/bbb0ttle/bbblog"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
 
   "scripts": {
