@@ -24,7 +24,7 @@ class BBPost extends HTMLElement {
 
 class BBBlog extends HTMLElement {
   static get observedAttributes() {
-    return ['content'];
+    return ['content', 'logo'];
   }
 
   constructor() {
@@ -41,9 +41,14 @@ class BBBlog extends HTMLElement {
     if (name === 'content' && oldValue !== null && oldValue !== newValue && this.isConnected) {
       this.fetchPosts();
     }
+    if (name === 'logo' && this.isConnected) {
+      const logoEl = this.shadowRoot!.querySelector('.logo') as HTMLImageElement | null;
+      if (logoEl) logoEl.src = newValue || LOGO_SRC;
+    }
   }
 
   render() {
+    const logoSrc = this.getAttribute('logo') || LOGO_SRC;
     this.shadowRoot!.innerHTML = `
       <style>
         .posts-container {
@@ -66,7 +71,7 @@ class BBBlog extends HTMLElement {
         }
       </style>
       <div class="posts-container">
-        <img class="logo" src="${LOGO_SRC}" alt="logo">
+        <img class="logo" src="${logoSrc}" alt="logo">
         <div class="fallback" style="display:none;"><slot></slot></div>
       </div>
     `;

@@ -23,6 +23,13 @@ Or use via CDN:
 </bb-blog>
 ```
 
+### Custom Logo
+
+```html
+<bb-blog content="/posts.json" logo="data:image/svg+xml;base64,xxxxx">
+</bb-blog>
+```
+
 ### JSON Format
 
 The `content` attribute should point to a JSON file with an array of posts:
@@ -49,6 +56,7 @@ Main container component that fetches and displays posts.
 | Attribute | Description |
 |-----------|-------------|
 | `content` | URL to JSON file containing posts |
+| `logo` | Custom logo image (base64 data URI or URL). Falls back to default if not provided |
 
 ### `<bb-post>`
 
