@@ -1,7 +1,0 @@
-node_modules
-elm-stuff
-dist
-.vercel
-.env
-.idea
-yarn.lock
