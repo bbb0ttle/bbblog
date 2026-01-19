@@ -7,7 +7,7 @@ class BBPost extends HTMLElement {
       <style>
         .post{margin-bottom: 100px}
         .post-title{font-size:1.2em}
-        .post-content{margin-top:4px;color:#121111}
+        .post-content{margin-top:4px;color:#121111;text-autospace: normal;}
         .post-date{font-size:.8em;color:#999}
         a {color: #007fff; text-decoration: none;}
       </style>
